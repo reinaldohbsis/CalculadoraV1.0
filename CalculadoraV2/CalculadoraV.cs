@@ -17,6 +17,7 @@ namespace CalculadoraV2
         double numb;
         string temp = String.Empty;
         char operador = ' ';
+        bool jorge = true;
 
         public Calculadora()
         {
@@ -203,6 +204,29 @@ namespace CalculadoraV2
         {
             txt_digitar.Text = "";
             txt_resposta.Text = "";
+        }
+
+        private void btn_turbo_Click(object sender, EventArgs e)
+        {
+           
+            if (jorge == true)
+            {
+
+                MessageBox.Show("MOOOODDDOOOOO TURBOOOOOO");
+                this.BackColor = Color.Black;
+                this.txt_digitar.BackColor = Color.LightGreen;
+                this.txt_resposta.BackColor = Color.LightGreen;
+                jorge = false;
+            }
+            else
+            {
+                MessageBox.Show("MODO CHATO E NORMAL");
+                this.BackColor = Color.White;
+                this.txt_digitar.BackColor = Color.White;
+                this.txt_resposta.BackColor = Color.White;
+                jorge = true;
+            }
+
         }
     }
 }

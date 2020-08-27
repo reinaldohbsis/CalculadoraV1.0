@@ -17,7 +17,10 @@ namespace CalculadoraV2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Calculadora());
+            Calculadora calculadora = new Calculadora();
+            Application.Run(calculadora);
+
+            
 
 
         }

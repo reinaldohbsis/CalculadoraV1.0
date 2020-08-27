@@ -50,11 +50,12 @@
             this.btn_virgula = new System.Windows.Forms.Button();
             this.btn_porcento = new System.Windows.Forms.Button();
             this.btn_limpartudo = new System.Windows.Forms.Button();
+            this.btn_turbo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_9
             // 
-            this.btn_9.Location = new System.Drawing.Point(12, 210);
+            this.btn_9.Location = new System.Drawing.Point(174, 210);
             this.btn_9.Name = "btn_9";
             this.btn_9.Size = new System.Drawing.Size(75, 53);
             this.btn_9.TabIndex = 0;
@@ -74,7 +75,7 @@
             // 
             // btn_7
             // 
-            this.btn_7.Location = new System.Drawing.Point(174, 210);
+            this.btn_7.Location = new System.Drawing.Point(12, 210);
             this.btn_7.Name = "btn_7";
             this.btn_7.Size = new System.Drawing.Size(75, 53);
             this.btn_7.TabIndex = 2;
@@ -84,7 +85,7 @@
             // 
             // btn_4
             // 
-            this.btn_4.Location = new System.Drawing.Point(174, 269);
+            this.btn_4.Location = new System.Drawing.Point(12, 269);
             this.btn_4.Name = "btn_4";
             this.btn_4.Size = new System.Drawing.Size(75, 53);
             this.btn_4.TabIndex = 5;
@@ -104,7 +105,7 @@
             // 
             // btn_6
             // 
-            this.btn_6.Location = new System.Drawing.Point(12, 269);
+            this.btn_6.Location = new System.Drawing.Point(174, 269);
             this.btn_6.Name = "btn_6";
             this.btn_6.Size = new System.Drawing.Size(75, 53);
             this.btn_6.TabIndex = 3;
@@ -114,7 +115,7 @@
             // 
             // btn_1
             // 
-            this.btn_1.Location = new System.Drawing.Point(174, 328);
+            this.btn_1.Location = new System.Drawing.Point(12, 328);
             this.btn_1.Name = "btn_1";
             this.btn_1.Size = new System.Drawing.Size(75, 53);
             this.btn_1.TabIndex = 8;
@@ -134,7 +135,7 @@
             // 
             // btn_3
             // 
-            this.btn_3.Location = new System.Drawing.Point(12, 328);
+            this.btn_3.Location = new System.Drawing.Point(174, 328);
             this.btn_3.Name = "btn_3";
             this.btn_3.Size = new System.Drawing.Size(75, 53);
             this.btn_3.TabIndex = 6;
@@ -275,11 +276,26 @@
             this.btn_limpartudo.UseVisualStyleBackColor = false;
             this.btn_limpartudo.Click += new System.EventHandler(this.btn_limpartudo_Click);
             // 
+            // btn_turbo
+            // 
+            this.btn_turbo.BackColor = System.Drawing.Color.Lime;
+            this.btn_turbo.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.btn_turbo.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_turbo.ForeColor = System.Drawing.Color.Fuchsia;
+            this.btn_turbo.Location = new System.Drawing.Point(12, 470);
+            this.btn_turbo.Name = "btn_turbo";
+            this.btn_turbo.Size = new System.Drawing.Size(75, 29);
+            this.btn_turbo.TabIndex = 22;
+            this.btn_turbo.Text = "TURBO";
+            this.btn_turbo.UseVisualStyleBackColor = false;
+            this.btn_turbo.Click += new System.EventHandler(this.btn_turbo_Click);
+            // 
             // Calculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(346, 514);
+            this.Controls.Add(this.btn_turbo);
             this.Controls.Add(this.btn_limpartudo);
             this.Controls.Add(this.btn_porcento);
             this.Controls.Add(this.btn_virgula);
@@ -336,6 +352,7 @@
         private System.Windows.Forms.Button btn_virgula;
         private System.Windows.Forms.Button btn_porcento;
         private System.Windows.Forms.Button btn_limpartudo;
+        private System.Windows.Forms.Button btn_turbo;
     }
 }
 
