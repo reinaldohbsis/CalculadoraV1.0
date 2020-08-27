@@ -15,13 +15,8 @@ namespace CalculadoraV2
     {
         double numa;
         double numb;
-        double resultado;
         string temp = String.Empty;
-        char operador;
-        string retorno;
-        Resultado resposta = new Resultado();
-
-        
+        char operador = ' ';
 
         public Calculadora()
         {
@@ -30,7 +25,12 @@ namespace CalculadoraV2
 
         private void btn_soma_Click(object sender, EventArgs e)
         {
-            numa = double.Parse(txt_digitar.Text);
+            if (numa == 0)
+            {
+                numa = double.Parse(txt_digitar.Text);
+            }
+            
+            
             txt_digitar.Text += " + ";
             operador = '+';
 
@@ -61,55 +61,25 @@ namespace CalculadoraV2
             
             if (txt_digitar.Text == "")
             {
-                txt_resposta.Text =  resposta.ErroRe();
+                txt_resposta.Text =  Resultado.ErroRe();
             }
             else
             {
                 temp = txt_digitar.Text;
-                try
-                {
-                    numb = double.Parse(temp.Substring(temp.LastIndexOf(' ')));
-                }
-                catch
-                {
-                    numa = double.Parse(txt_digitar.Text);
-                    numb = 0;
-                }
 
-                txt_resposta.Text = resposta.Resposta(numa, numb, operador).ToString();
-                
-                
-                //switch (operador)
+                Resultado.Numb(temp, numa, operador, out numa, out numb);
+                //try
                 //{
-                //    case '+':
-                //        resultado = numa + numb;
-                //        txt_resposta.Text = resultado.ToString();
-                //        break;
-                //    case '-':
-                //        resultado = numa - numb;
-                //        txt_resposta.Text = resultado.ToString();
-                //        break;
-                //    case '*':
-                //        resultado = numa * numb;
-                //        txt_resposta.Text = resultado.ToString();
-                //        break;
-                //    case '/':
-                //        if (numb != 0)
-                //        {
-                //            resultado = numa / numb;
-                //            txt_resposta.Text = resultado.ToString();
-                //        }
-                //        else
-                //        {
-                //            txt_resposta.Text = "Não seja um animal, dividir por 0 não dá";
-                //        }
-                //        break;
-                //    case ' ':
-                //        resultado = numa;
-                //        txt_resposta.Text = resultado.ToString();
-                //        break;
-
+                //    numb = double.Parse(temp.Substring(temp.LastIndexOf(' ')));
                 //}
+                //catch
+                //{
+                //    numa = double.Parse(txt_digitar.Text);
+                //    numb = 0;
+                //}
+
+                txt_resposta.Text = Resultado.Resposta(numa, numb, operador).ToString();
+                
                 Limpar();
             }
 
@@ -187,14 +157,22 @@ namespace CalculadoraV2
             numb = 0;
             operador = ' ';
             temp = String.Empty;
-            resultado = 0;
             txt_digitar.Text = "";
 
         }
 
         private void btn_ans_Click(object sender, EventArgs e)
         {
-            txt_digitar.Text = txt_resposta.Text;
+            try {
+
+                txt_digitar.Text = double.Parse(txt_resposta.Text).ToString();
+
+            }
+            catch
+            {
+                txt_digitar.Text = "";
+            }
+            
         }
 
         private void btn_virgula_Click(object sender, EventArgs e)
@@ -205,6 +183,20 @@ namespace CalculadoraV2
         private void Calculadora_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_porcento_Click(object sender, EventArgs e)
+        {
+            txt_digitar.Text += "%";
+            if (operador == ' ')
+            {
+                numa = double.Parse(txt_digitar.Text.Replace("%", "")) / 100;
+            }
+            else
+            {
+                Resultado.Numb(txt_digitar.Text, numa, operador, out numa, out numb);                
+            }
+            
         }
     }
 }

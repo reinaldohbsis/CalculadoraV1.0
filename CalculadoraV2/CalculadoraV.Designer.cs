@@ -48,6 +48,7 @@
             this.txt_resposta = new System.Windows.Forms.TextBox();
             this.btn_ans = new System.Windows.Forms.Button();
             this.btn_virgula = new System.Windows.Forms.Button();
+            this.btn_porcento = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_9
@@ -214,18 +215,21 @@
             // 
             // txt_digitar
             // 
+            this.txt_digitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_digitar.Location = new System.Drawing.Point(12, 30);
             this.txt_digitar.Name = "txt_digitar";
-            this.txt_digitar.Size = new System.Drawing.Size(318, 26);
+            this.txt_digitar.Size = new System.Drawing.Size(318, 39);
             this.txt_digitar.TabIndex = 16;
             this.txt_digitar.TextChanged += new System.EventHandler(this.txt_digitar_TextChanged);
             // 
             // txt_resposta
             // 
-            this.txt_resposta.Location = new System.Drawing.Point(12, 102);
+            this.txt_resposta.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_resposta.Location = new System.Drawing.Point(12, 92);
             this.txt_resposta.Name = "txt_resposta";
-            this.txt_resposta.Size = new System.Drawing.Size(318, 26);
+            this.txt_resposta.Size = new System.Drawing.Size(318, 44);
             this.txt_resposta.TabIndex = 17;
+            this.txt_resposta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txt_resposta.TextChanged += new System.EventHandler(this.txt_resposta_TextChanged);
             // 
             // btn_ans
@@ -249,11 +253,22 @@
             this.btn_virgula.UseVisualStyleBackColor = true;
             this.btn_virgula.Click += new System.EventHandler(this.btn_virgula_Click);
             // 
+            // btn_porcento
+            // 
+            this.btn_porcento.Location = new System.Drawing.Point(255, 446);
+            this.btn_porcento.Name = "btn_porcento";
+            this.btn_porcento.Size = new System.Drawing.Size(75, 53);
+            this.btn_porcento.TabIndex = 20;
+            this.btn_porcento.Text = "%";
+            this.btn_porcento.UseVisualStyleBackColor = true;
+            this.btn_porcento.Click += new System.EventHandler(this.btn_porcento_Click);
+            // 
             // Calculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(346, 479);
+            this.ClientSize = new System.Drawing.Size(346, 514);
+            this.Controls.Add(this.btn_porcento);
             this.Controls.Add(this.btn_virgula);
             this.Controls.Add(this.btn_ans);
             this.Controls.Add(this.txt_resposta);
@@ -306,6 +321,7 @@
         private System.Windows.Forms.TextBox txt_resposta;
         private System.Windows.Forms.Button btn_ans;
         private System.Windows.Forms.Button btn_virgula;
+        private System.Windows.Forms.Button btn_porcento;
     }
 }
 
