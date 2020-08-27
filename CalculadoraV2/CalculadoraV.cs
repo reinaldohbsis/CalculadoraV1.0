@@ -166,12 +166,12 @@ namespace CalculadoraV2
         {
             try {
 
-                txt_digitar.Text = double.Parse(txt_resposta.Text).ToString();
+                txt_digitar.Text += double.Parse(txt_resposta.Text).ToString();
 
             }
             catch
             {
-                txt_digitar.Text = "";
+                txt_digitar.Text += "";
             }
             
         }
@@ -216,6 +216,7 @@ namespace CalculadoraV2
                 this.BackColor = Color.Black;
                 this.txt_digitar.BackColor = Color.LightGreen;
                 this.txt_resposta.BackColor = Color.LightGreen;
+                btn_0.BackColor = Color.Pink;
                 jorge = false;
             }
             else
@@ -224,6 +225,7 @@ namespace CalculadoraV2
                 this.BackColor = Color.White;
                 this.txt_digitar.BackColor = Color.White;
                 this.txt_resposta.BackColor = Color.White;
+                btn_0.BackColor = Color.LightGray;
                 jorge = true;
             }
 
