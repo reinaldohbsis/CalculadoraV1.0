@@ -198,5 +198,11 @@ namespace CalculadoraV2
             }
             
         }
+
+        private void btn_limpartudo_Click(object sender, EventArgs e)
+        {
+            txt_digitar.Text = "";
+            txt_resposta.Text = "";
+        }
     }
 }

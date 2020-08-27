@@ -49,6 +49,7 @@
             this.btn_ans = new System.Windows.Forms.Button();
             this.btn_virgula = new System.Windows.Forms.Button();
             this.btn_porcento = new System.Windows.Forms.Button();
+            this.btn_limpartudo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_9
@@ -263,11 +264,23 @@
             this.btn_porcento.UseVisualStyleBackColor = true;
             this.btn_porcento.Click += new System.EventHandler(this.btn_porcento_Click);
             // 
+            // btn_limpartudo
+            // 
+            this.btn_limpartudo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btn_limpartudo.Location = new System.Drawing.Point(174, 151);
+            this.btn_limpartudo.Name = "btn_limpartudo";
+            this.btn_limpartudo.Size = new System.Drawing.Size(75, 53);
+            this.btn_limpartudo.TabIndex = 21;
+            this.btn_limpartudo.Text = "CE";
+            this.btn_limpartudo.UseVisualStyleBackColor = false;
+            this.btn_limpartudo.Click += new System.EventHandler(this.btn_limpartudo_Click);
+            // 
             // Calculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(346, 514);
+            this.Controls.Add(this.btn_limpartudo);
             this.Controls.Add(this.btn_porcento);
             this.Controls.Add(this.btn_virgula);
             this.Controls.Add(this.btn_ans);
@@ -322,6 +335,7 @@
         private System.Windows.Forms.Button btn_ans;
         private System.Windows.Forms.Button btn_virgula;
         private System.Windows.Forms.Button btn_porcento;
+        private System.Windows.Forms.Button btn_limpartudo;
     }
 }
 
